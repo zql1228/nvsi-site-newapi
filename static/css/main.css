@@ -1,0 +1,20 @@
+.login-box{
+  margin-bottom: 10px !important;
+}
+.mtbd-source{
+  margin-top: 0px !important;
+}
+.js-search{
+  margin-top:18px !important;
+}
+.top-source{
+  float: left;
+}
+.source_width{
+  width:100%;
+}
+
+select::-ms-expand { display: none; }     /* 清除ie下拉框默认样式 */
+.js-report-box .js-title {
+  font-size: 15px;
+}

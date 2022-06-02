@@ -1,0 +1,600 @@
+@mixin c(){
+  margin: 0;
+  padding:0;
+}
+@mixin line-clamp($a){
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $a;
+}
+@mixin font($a,$b,$c){
+  color: $a;
+  font-size: $b;
+  font-weight: $c;
+}
+@mixin words(){
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden
+}
+@mixin border($a){
+  border:1px solid $a;
+}
+
+.J-auto{
+  @include c();
+  width: 1200px;
+  margin: 0 auto;
+}
+.J-main{
+  background: #fff;
+  overflow: hidden;
+}
+.J-loading-box{
+  padding: 35px 140px;
+  box-sizing: border-box;
+  &__ul{
+    @include c();
+    width: 100%;
+    font-size: 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+  &__li{
+    @include c();
+    width: 33.333%;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    &::after{
+      display: block;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #E3E3E3;
+      right: 0;
+      top: 16px;
+    }
+    &_info{
+      @include c();
+      display: inline-block;
+      box-sizing: border-box;
+      text-align: center;
+      position: relative;
+      z-index: 9;
+    }
+  }
+}
+.J-cicrl{
+  width: 32px;
+  height: 32px;
+  display:inline-block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  @include font(#333, 16px, 400);
+  background: #E3E3E3;
+  text-align: center;
+  line-height: 32px;
+  &_p{
+    @include c();
+    margin-top: 22px;
+    @include font(#333, 16px, 400);
+  }
+}
+.J-after-w90{
+  position: relative;
+  box-sizing: border-box;
+  &:after{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    background: #E3E3E3;
+    right: 0;
+    top: 16px;
+  }
+}
+.J-last-li{
+  @include c();
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 9;
+  position: absolute;
+  right: -32px;
+  top: 0;
+}
+.J-active{
+  span{
+    background: #ED3C3C;
+    color: #fff;
+  }
+  p{
+    color: #ED3C3C;
+  }
+}
+.J-check{
+  position: relative;
+  box-sizing: border-box;
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 52px;
+  &_h2{
+    @include c();
+    @include font(#999, 24px, bold);
+    margin-top: 19px;
+  }
+  &__ul{
+    @include c();
+    font-size: 0;
+    box-sizing: border-box;
+  }
+  &__li{
+    @include c();
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+  &_h1{
+    @include c();
+    @include font(#333, 18px, bold);
+    padding-bottom: 7px;
+    box-sizing: border-box;
+  }
+  &_input{
+    @include c();
+    width: 100%;
+    height: 50px;
+    outline: none;
+    @include border(#DCDCDC);
+    border-radius: 3px;
+    padding-left: 42px;
+    box-sizing: border-box;
+    position: relative;
+    &::placeholder{
+      @include font(#999, 14px, 400);
+    }
+  }
+}
+.J-check-img{
+  margin-top: 26px;
+  position: relative;
+  box-sizing: border-box;
+  &_img{
+    width: 14.5px;
+    height: auto;
+    display: inline-block;
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    z-index: 99;
+  }
+}
+.J-check-code{
+  width: 90%;
+  @include border(#DCDCDC);
+  height: 48px;
+  border-radius: 3px;
+  float: right;
+  &_img{
+    width: 100%;
+    height: 100%;
+  }
+}
+.J-find{
+  @include c();
+  @include font(#333, 14px, 400);
+  text-align: center;
+  margin-top: 23px;
+  padding-bottom: 75px;
+  box-sizing: border-box;
+  &_a{
+    text-decoration: underline;
+    color: #ED3C3C;
+    cursor: pointer;
+  }
+}
+.J-button-box{
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 39px;
+  box-sizing: border-box;
+}
+.J-next{
+  @include border(#ED3C3C);
+  outline: none;
+  background: #ED3C3C;
+  border-radius: 3px;
+  @include font(#fff, 16px, 400);
+  width: 98px;
+  height: 38px;
+  cursor: pointer;
+  &:hover{
+    background: #fff;
+    color: #ED3C3C;
+    @include border(#ED3C3C);
+  }
+}
+.J-find-page{
+  box-sizing: border-box;
+  position: relative;
+  width: 450px;
+  margin: 0 auto;
+  &__ul{
+    @include c();
+    font-size: 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+  &__li{
+    margin-top: 20px;
+    @include c();
+    vertical-align: top;
+    position: relative;
+  }
+  &_h1{
+  @include c();
+  text-align: center;
+  @include font(#333, 20px, bold);
+  margin: 50px 0px 68px 0px;
+  }
+  &_p{
+    @include c();
+    @include font(#333, 16px, 400);
+  }
+  &_i{
+    @include c();
+    @include font(#999, 14px, 400);
+    font-style: normal;
+  }
+  &_span{
+    @include c();
+    @include font(#ED3C3C, 16px, 400);
+  }
+}
+.J-find-page__inputgap{
+  margin-top: 15px;
+  position: relative;
+  box-sizing: border-box;
+}
+.J-select{
+  @include c();
+  width: 100%;
+  height: 50px;
+  outline: none;
+  @include border(#DCDCDC);
+  border-radius: 3px;
+  padding-left: 42px;
+  box-sizing: border-box;
+  position: relative;
+  &::-ms-expand{display:none;}
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  position: relative;
+}
+.J-select-down{
+  position: relative;
+  &::after{
+    content: "";
+    height: 16px;
+    width: 18px;
+    display: inline-block;
+    position: absolute;
+    right: 23.6px;
+    top: 18.6px;
+    background: url("../img/forgetpwd/J-blue-down.png") no-repeat center center;
+  }
+}
+.J-red-down{
+  position: relative;
+  &::after{
+    content: "";
+    height: 16px;
+    width: 18px;
+    display: inline-block;
+    position: absolute;
+    right: 23.6px;
+    top: 18.6px;
+    background: url("../img/forgetpwd/J-red-down.png") no-repeat center center;
+  }
+}
+.J-mt-23{
+  margin-top: 23px;
+}
+.J-upload{
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: top;
+  &__main{
+    width: 140px;
+    height: 140px;
+    @include border(#DCDCDC);
+    border-radius: 3px;
+    position: relative;
+    background: url('../img/forgetpwd/J-upload.png') no-repeat center center;
+    input{
+      @include c();
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+  }
+  &_p{
+    @include c();
+    margin-top: 10px;
+    @include font(#999, 16px, 400);
+  }
+}
+.J-upload-img{
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: top;
+  &_main{
+    width: 140px;
+    height: 140px;
+    border-radius: 3px;
+    position: relative;
+    background: #EBEBEB;
+  }
+  &_X{
+    @include c();
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+  }
+}
+.J-mt-20{
+  margin-top: 20px;
+}
+.J-ml-17{
+  margin-left: 17px;
+}
+.J-upfile-frame{
+  width: 450px;
+  height: 393px;
+  padding: 20px 15px 15px 13px;
+  box-sizing: border-box;
+  position: absolute;
+  right: -350px;
+  top: -233px;
+  box-shadow: #DCDCDC 0px 0px 6px;
+  &_X{
+    @include c();
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 31px;
+    height: 31px;
+  }
+  &_info{
+    background: #F1F3F1;
+    width: 100%;
+    height: 320px;
+  }
+  &__ul{
+    @include c();
+    box-sizing: border-box;
+    font-size: 0;
+    position: relative;
+    margin: 0 -8px;
+  }
+  &__li{
+    @include c();
+    width: 25%;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 10px 8px 0px 8px;
+    &_info{
+      @include font(#ED3C3C, 14px, 400);
+      @include border(#ED3C3C);
+      border-radius: 3px;
+      position: relative;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      img{
+        @include c();
+        margin-right: 3px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.J-mt-15{
+  margin-top: 15px;
+}
+.J-mt-54{
+  margin-top: 54px;
+}
+.J-check-ways{
+  width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+  &__ul{
+  @include c();
+  font-size: 0;
+  box-sizing: border-box;
+  }
+  &__li{
+    @include c();
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    vertical-align: top;
+    margin-top: 23px;
+    &_info{
+      @include border(#DCDCDC);
+      border-radius: 3px;
+      box-sizing: border-box;
+      padding: 28px 31px;
+    }
+  }
+}
+.J-check-send{
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 29px;
+  &_i{
+    @include c();
+    font-style: normal;
+    @include font(#666, 14px, 400);
+  }
+  &_p{
+    @include c();
+    margin-top: 10px;
+    @include font(#333, 16px, 400);
+  }
+  &_span{
+    @include c();
+  }
+  &_img{
+    @include c();
+    float: right;
+    display: inline-block;
+    width: 11px;
+    height: 20px;
+    vertical-align: middle;
+    margin-top: 15px;
+  }
+}
+.J-left-img{
+    @include c();
+    width: 44px;
+    height: 44px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.J-help{
+  @include c();
+  @include font(#ED3C3C, 14px, 400);
+  text-align: center;
+  padding: 5px 14px;
+  box-sizing: border-box;
+  @include border(#ED3C3C);
+  border-radius: 3px;
+  font-style: normal;
+  cursor: pointer;
+  float: right;
+  margin-top: 15px;
+  &:hover{
+    background: #ED3C3C;
+    color: #fff;
+  }
+}
+.J-pb-43{
+  padding-bottom: 43px;
+  box-sizing: border-box;
+}
+.J-mp-0{
+  padding-bottom: 0;
+  margin-top: 10px;
+  text-align:left;
+  margin-left: 25px;
+}
+.J-pb-75{
+  padding-bottom: 75px;
+  box-sizing: border-box;
+}
+
+.J-sure{
+  @include border(#ED3C3C);
+  outline: none;
+  background: #ED3C3C;
+  border-radius: 3px;
+  @include font(#fff, 16px, 400);
+  width: 98px;
+  height: 38px;
+  cursor: pointer;
+  margin-left: 22px;
+}
+.J-cancle{
+  @include border(#ED3C3C);
+  outline: none;
+  background: #fff;
+  border-radius: 3px;
+  @include font(#ED3C3C, 16px, 400);
+  width: 98px;
+  height: 38px;
+  cursor: pointer;
+}
+.J-code{
+  @include c();
+  @include font(#ED3C3C, 14px, 400);
+  text-align: center;
+  padding: 5px 14px;
+  box-sizing: border-box;
+  @include border(#ED3C3C);
+  border-radius: 3px;
+  font-style: normal;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+  &:hover{
+    background: #ED3C3C;
+    color: #fff;
+  }
+}
+.J-smb{
+  @include c();
+  @include font(#999, 14px, 400);
+  margin-top: 15px;
+}
+.J-pb-0{
+  padding-bottom: 0;
+}
+.J-bottom-tip{
+  @include c();
+  margin-top: 21px;
+  margin-bottom: 27px;
+  @include font(#333, 14px, 400);
+  &_a{
+    @include c();
+    @include font(#ED3C3C, 14px, 400);
+    cursor: pointer;
+  }
+}
+.J-get{
+  width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  &_img{
+    width: 122px;
+    height: 122px;
+    @include c();
+    margin-top: 130px;
+    margin-bottom: 59px;
+  }
+  &_p{
+    @include c();
+    @include font(#333, 20px, 400);
+
+    margin-bottom: 130px;
+  }
+  &_span{
+    @include c();
+    @include font(#ED3C3C, 20px, 400);
+
+  }
+}

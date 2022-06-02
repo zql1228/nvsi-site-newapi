@@ -1,0 +1,94 @@
+
+html {
+    font-size: 125%;
+}
+.mid {
+    width: 100%!important;
+}
+#header > div {
+    display: flex;
+}
+#header > div > div.col.t-l > h1 {
+    padding: 0 .75rem;
+    box-sizing: border-box;
+}
+#header > div > div.col.t-l > h1 > img {
+    width: 100%;
+}
+#header > div > div.col.t-l > h1 > span {
+    width: 4rem;
+    height: 1.3rem;
+    right: .5rem;
+    line-height: 1.3rem;
+    font-size: .8rem;
+    background-position: left center;
+}
+#header > div > div.col.t-r.v-m {
+    display: none;
+}
+#navigationBar > ul {
+    white-space: nowrap;
+    overflow: auto;
+}
+#navigationBar > ul > li {
+    width: auto;
+}
+#navigationBar > ul > li > a {
+    padding: 0 .75rem;
+}
+#homebody > div.js-bg-img > div > div.info > a.info-tit.oneline {
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+#homebody > div.js-bg-img > div > div.info > a.info-tit.oneline > em {
+    font-size: .8rem;
+    width: 3.5rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    margin-right: .5rem;
+}
+
+#homebody > div.js-bg-img > div > div.info > p {
+    text-align: left;
+    padding: 0 1rem;
+}
+#homebody > div.js-bg-img > div > div.info {
+    position: relative;
+}
+#homebody > div.js-bg-img > div > div.info > a.top_moretitle {
+    position: absolute;
+    right: 1rem;
+    bottom: 1.4rem;
+}
+#homebody > div.js-bg-img > div > div.mid.row {
+    display: flex;
+    flex-direction: column;
+}
+#homebody > div.js-bg-img > div > div.mid.row > div:nth-child(1) {
+    display: block;
+    width: 100% !important;
+    
+}
+#homebody > div.js-bg-img > div > div.mid.row > div:nth-child(1) > div,
+#homebody > div.js-bg-img > div > div.mid.row > div:nth-child(1) > div > div.swiper-wrapper > div {
+    width: 100%;
+    height: 12rem;
+}
+.slideBox .swiper-slide a {
+    height: 100% !important;
+}
+#homebody > div.js-bg-img > div > div.mid.row > div:nth-child(2) {
+    padding: 1rem 1rem 0!important;
+}
+#homebody > div.js-bg-img > div > div.mid.row > div:nth-child(1) > div > div.paginations {
+    bottom: .3rem;
+    padding-right: .5rem;
+}
+#homebody > div.js-bg-img > div > div.mid.row > div:nth-child(1) > div > div.swiper-wrapper > div > a > span {
+    padding: 0 5rem 0 1rem;
+}
+
+.footer,
+.js-right-fixed {
+    display: none;
+}
